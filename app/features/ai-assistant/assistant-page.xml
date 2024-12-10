@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="AI Assistant">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" />
+    </ActionBar>
+    
+    <GridLayout rows="*, auto">
+        <ListView row="0" items="{{ conversation }}" class="chat-list">
+            <ListView.itemTemplate>
+                <GridLayout columns="*" class="{{ isUser ? 'user-message' : 'ai-message' }} p-2 m-2">
+                    <Label text="{{ message }}" textWrap="true" class="p-2" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        
+        <GridLayout row="1" columns="*, auto" class="p-2">
+            <TextField col="0" text="{{ userInput }}" hint="Ask about your boat..." class="input p-2" />
+            <Button col="1" text="Send" tap="{{ onSendMessage }}" class="-primary" />
+        </GridLayout>
+    </GridLayout>
+</Page>

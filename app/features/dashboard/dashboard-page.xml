@@ -1,0 +1,40 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="BoatMate Dashboard" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <GridLayout rows="auto, auto" columns="*, *" class="mb-4">
+                <StackLayout col="0" row="0" class="p-2">
+                    <Label text="Boat Type" class="text-sm text-gray-600" />
+                    <Label text="{{ boat.type }}" class="text-lg font-bold" />
+                </StackLayout>
+                <StackLayout col="1" row="0" class="p-2">
+                    <Label text="Length" class="text-sm text-gray-600" />
+                    <Label text="{{ boat.length + ' ft' }}" class="text-lg font-bold" />
+                </StackLayout>
+                <StackLayout col="0" row="1" class="p-2">
+                    <Label text="Engine" class="text-sm text-gray-600" />
+                    <Label text="{{ boat.engineModel }}" class="text-lg font-bold" />
+                </StackLayout>
+                <StackLayout col="1" row="1" class="p-2">
+                    <Label text="Year" class="text-sm text-gray-600" />
+                    <Label text="{{ boat.yearManufactured }}" class="text-lg font-bold" />
+                </StackLayout>
+            </GridLayout>
+
+            <StackLayout class="mb-4">
+                <Label text="Upcoming Maintenance" class="text-xl font-bold mb-2" />
+                <ListView items="{{ upcomingTasks }}" height="120">
+                    <ListView.itemTemplate>
+                        <StackLayout class="p-2">
+                            <Label text="{{ title }}" class="font-semibold" />
+                            <Label text="{{ dueDate }}" class="text-sm text-gray-500" />
+                        </StackLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <Button text="Ask AI Assistant" tap="{{ onAskAI }}" class="-primary mb-4" />
+        </StackLayout>
+    </ScrollView>
+</Page>

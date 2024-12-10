@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tabs xmlns="http://schemas.nativescript.org/tns.xsd" selectedIndex="0">
+    <TabStrip>
+        <TabStripItem>
+            <Label text="Dashboard" />
+            <Image src="font://&#xf015;" class="fas" />
+        </TabStripItem>
+        <TabStripItem>
+            <Label text="Maintenance" />
+            <Image src="font://&#xf0ad;" class="fas" />
+        </TabStripItem>
+        <TabStripItem>
+            <Label text="Assistant" />
+            <Image src="font://&#xf075;" class="fas" />
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <Frame defaultPage="features/dashboard/dashboard-page" />
+    </TabContentItem>
+    <TabContentItem>
+        <Frame defaultPage="features/maintenance/maintenance-page" />
+    </TabContentItem>
+    <TabContentItem>
+        <Frame defaultPage="features/ai-assistant/assistant-page" />
+    </TabContentItem>
+</Tabs>

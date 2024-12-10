@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Maintenance" />
+    
+    <GridLayout rows="auto, *">
+        <StackLayout row="0" class="p-4">
+            <Button text="Add Task" tap="{{ onAddTask }}" class="-primary" />
+        </StackLayout>
+        
+        <ListView row="1" items="{{ maintenanceTasks }}" class="list-group">
+            <ListView.itemTemplate>
+                <StackLayout class="list-group-item">
+                    <Label text="{{ title }}" class="text-lg" />
+                    <Label text="{{ description }}" class="text-sm text-gray-600" textWrap="true" />
+                    <Label text="{{ dueDate }}" class="text-xs text-gray-500" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

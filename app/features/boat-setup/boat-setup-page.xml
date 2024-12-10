@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Boat Setup" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Welcome to BoatMate" class="text-2xl font-bold text-center mb-4" />
+            <Label text="Let's set up your boat details" class="text-lg text-center mb-8" />
+            
+            <Label text="Boat Type" class="text-sm text-gray-600" />
+            <TextField text="{{ boatType }}" 
+                      hint="e.g., Sailboat, Motor Yacht" 
+                      class="input-field" />
+            
+            <Label text="Engine Model" class="text-sm text-gray-600" />
+            <TextField text="{{ engineModel }}" 
+                      hint="Engine model/make" 
+                      class="input-field" />
+            
+            <Label text="Length (feet)" class="text-sm text-gray-600" />
+            <TextField text="{{ boatLength }}" 
+                      hint="Boat length in feet" 
+                      keyboardType="number" 
+                      class="input-field" />
+            
+            <Label text="Year Manufactured" class="text-sm text-gray-600" />
+            <TextField text="{{ yearManufactured }}" 
+                      hint="Year" 
+                      keyboardType="number" 
+                      class="input-field" />
+            
+            <Button text="Save Boat Details" 
+                    tap="{{ onSaveBoat }}" 
+                    class="primary-button mt-8" />
+        </StackLayout>
+    </ScrollView>
+</Page>

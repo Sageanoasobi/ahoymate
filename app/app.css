@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fas {
+    font-family: "Font Awesome 6 Free", "fa-solid-900";
+    font-weight: 900;
+    font-size: 24;
+}
+
+Page {
+    background-color: #ffffff;
+}
+
+ActionBar {
+    background-color: #2563eb;
+    color: white;
+}
+
+.primary-button {
+    background-color: #2563eb;
+    color: white;
+    font-size: 16;
+    font-weight: bold;
+    padding: 12 16;
+    border-radius: 8;
+}
+
+.input-field {
+    font-size: 16;
+    padding: 12 16;
+    margin: 8 0;
+    border-width: 1;
+    border-color: #e5e7eb;
+    border-radius: 8;
+    placeholder-color: #9ca3af;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12;
+    margin: 8;
+    padding: 16;
+    elevation: 2;
+}
